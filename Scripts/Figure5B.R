@@ -117,8 +117,6 @@ LINE_LOUCY <- nrow(LD3_meth_LINE) # number of annotated LINEs
 SINE_LOUCY <- nrow(LD3_meth_SINE) # number of annotated SINEs
 
 # Calculate percent of hypo and hyper
-
-# LOUCY
 summary_L_percent <- summary_LOUCY
 summary_L_percent$percent_hypo <- 0
 summary_L_percent$percent_hyper <- 0
@@ -145,9 +143,8 @@ for (i in 1:nrow(summary_L_percent)) {
   rm(x)
 }
 
-# summary_L_percent column percent_hypo, percent_hyper and percent_ns was used in Graphpad
 
-# SUPT1
+#### SUPT1----
 input_S <- list(SD3_meth_ERV, SG3_meth_ERV, SG7_meth_ERV, 
                 SD3_meth_LINE, SG3_meth_LINE, SG7_meth_LINE,
                 SD3_meth_SINE, SG3_meth_SINE, SG7_meth_SINE)
@@ -203,9 +200,9 @@ for (i in 1:nrow(summary_S_percent)) {
   rm(x)
 }
 
-# Extended Data Fig 6A,B was done in Graphpad
+# Figure 5B was done in Graphpad using summary_L_percent and summary_S_percent, columns percent_hypo, percent_hyper and percent_ns
 
-# summary_L_percent column percent_hypo, percent_hyper and percent_ns was used in Graphpad
+
 
 
 
