@@ -34,8 +34,8 @@ for (i in 1:length(pack_R)) {
 #-------------------------------------------------------------------------------
 
 # Read the data from csv
-meth_loucy <- read.delim("Supplementary_Table_14.csv", sep = ",") # LOUCY
-meth_supt1 <- read.delim("Supplementary_Table_13.csv", sep = ",") # SUP-T1
+meth_loucy <- read.delim("Supplementary_Table_13.csv", sep = ",") # LOUCY
+meth_supt1 <- read.delim("Supplementary_Table_14.csv", sep = ",") # SUP-T1
 
 # Function to filter rows by sample pattern and class_id type, and select specific columns
 filter_samples <- function(data, sample_id, class_type) {
