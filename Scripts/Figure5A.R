@@ -1,6 +1,6 @@
 # Circos plot genome-wide methylation of TEs in 500kb bins
 
-# Title: Fig5A
+# Title: Figure 5A
 
 # Author: Sandra Hellberg
 # Email: sandra.hellberg@liu.se
