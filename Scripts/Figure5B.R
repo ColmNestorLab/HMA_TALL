@@ -5,12 +5,6 @@
 # Date: 2024-01-22
 # Last modified: 2024-08-14
 
-# Description: emseq data was pre-processed and analyzed by Maike Bensberg
-
-# Script for Fig5B and data for Extended Data Fig 6A-B
-
-# Samples: 4 samples Loucy, 4 samples SUP-T1 (the two cell lines have been processed separately)
-
 rm(list=ls()) # remove all entries in the global environment 
 set.seed(568) # seed for reproducibility
 
