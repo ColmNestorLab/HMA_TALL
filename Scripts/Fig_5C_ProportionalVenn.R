@@ -34,8 +34,6 @@ for (i in 1:length(pack_R)) {
                           ## METHYLATION----
 
 #-------------------------------------------------------------------------------
-                  ### Read in and format input data----
-#-------------------------------------------------------------------------------
 # Read the data from csv
 meth_loucy <- read.delim("Supplementary_Table_15.csv", sep = ",") # LOUCY
 meth_supt1 <- read.delim("Supplementary_Table_16.csv", sep = ",") # SUP-T1
@@ -128,8 +126,6 @@ SG7_meth_plot <- plot(fit_SG7_meth, fills = TRUE, edges = TRUE, quantities = TRU
                                   ## RNA-SEQ -----
 
 #-------------------------------------------------------------------------------
-                        ### Read in and format input data----
-#-------------------------------------------------------------------------------
 # Read the data from csv
 rna_loucy <- read.delim(paste0(rna_dir,"Supplementary_Table_17.csv"), sep = "," ) # LOUCY
 rna_supt1 <- read.delim(paste0(rna_dir,"Supplementary_Table_18.csv"), sep = "," ) # SUPT1
@@ -216,8 +212,6 @@ SG7_RNA_plot <- plot(fit_SG7_RNA, fills = TRUE, edges = TRUE, quantities = TRUE)
                       ## Combination methylation and RNA-seq-----
 
 #-------------------------------------------------------------------------------
-                                ### Plotting----
-#-------------------------------------------------------------------------------
 # LOUCY
 # LD3
 LD3_list_combined <- list(
@@ -271,7 +265,7 @@ SG7_combined_plot <- plot(fit_SG7_combined, fills = TRUE, edges = TRUE, quantiti
 
 #-------------------------------------------------------------------------------
 
-                    ### Export plots -----
+                                ### Export plots -----
 
 #-------------------------------------------------------------------------------
 
