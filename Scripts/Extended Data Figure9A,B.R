@@ -44,19 +44,16 @@ filter_samples <- function(data, sample_id, class_type) {
     select(class_id, methylation_treated, methylation_control)
 }
 
-# Define a list of class types to filter
-class_types <- c("LTR", "LINE", "SINE")
-
 # Filter LOUCY dataset
-LD3_meth_ERV <- filter_samples(meth_loucy, "LD3", "LTR")
+LD3_meth_ERV <- filter_samples(meth_loucy, "LD3", "LTR|LTR\\?")
 LD3_meth_LINE <- filter_samples(meth_loucy, "LD3", "LINE")
 LD3_meth_SINE <- filter_samples(meth_loucy, "LD3", "SINE")
 
-LG3_meth_ERV <- filter_samples(meth_loucy, "LG3", "LTR")
+LG3_meth_ERV <- filter_samples(meth_loucy, "LG3", "LTR|LTR\\?")
 LG3_meth_LINE <- filter_samples(meth_loucy, "LG3", "LINE")
 LG3_meth_SINE <- filter_samples(meth_loucy, "LG3", "SINE")
 
-LG7_meth_ERV <- filter_samples(meth_loucy, "LG7", "LTR")
+LG7_meth_ERV <- filter_samples(meth_loucy, "LG7", "LTR|LTR\\?")
 LG7_meth_LINE <- filter_samples(meth_loucy, "LG7", "LINE")
 LG7_meth_SINE <- filter_samples(meth_loucy, "LG7", "SINE")
 
@@ -79,15 +76,15 @@ SINE_L <- SINE_L[, c(1,3,2,4,5)]
 colnames(SINE_L)[3:5] <- c("LD3", "LG3", "LG7")
 
 # Filter SUP-T1 dataset
-SD3_meth_ERV <- filter_samples(meth_supt1, "SD3", "LTR")
+SD3_meth_ERV <- filter_samples(meth_supt1, "SD3", "LTR|LTR\\?")
 SD3_meth_LINE <- filter_samples(meth_supt1, "SD3", "LINE")
 SD3_meth_SINE <- filter_samples(meth_supt1, "SD3", "SINE")
 
-SG3_meth_ERV <- filter_samples(meth_supt1, "SG3", "LTR")
+SG3_meth_ERV <- filter_samples(meth_supt1, "SG3", "LTR|LTR\\?")
 SG3_meth_LINE <- filter_samples(meth_supt1, "SG3", "LINE")
 SG3_meth_SINE <- filter_samples(meth_supt1, "SG3", "SINE")
 
-SG7_meth_ERV <- filter_samples(meth_supt1, "SG7", "LTR")
+SG7_meth_ERV <- filter_samples(meth_supt1, "SG7","LTR|LTR\\?")
 SG7_meth_LINE <- filter_samples(meth_supt1, "SG7", "LINE")
 SG7_meth_SINE <- filter_samples(meth_supt1, "SG7", "SINE")
 
