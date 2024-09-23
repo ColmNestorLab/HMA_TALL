@@ -269,6 +269,15 @@ SG7_combined_plot <- plot(fit_SG7_combined, fills = TRUE, edges = TRUE, quantiti
 
 #-------------------------------------------------------------------------------
 
+# GSK300 7 days
+plot <- ggarrange(LG7_meth_plot, LG7_RNA_plot, LG7_combined_plot,
+                  SG7_meth_plot, SG7_RNA_plot, SG7_combined_plot, ncol = 3, nrow = 2)
+
+pdf(paste0(fig_dir, "Eular_meth_RNA_GSK7.pdf"), width = 15, height = 10)
+plot(plot)
+dev.off()
+
+# Extended data Fig 9d
 # DEC 3 days
 plot <- ggarrange(LD3_meth_plot, LD3_RNA_plot, LD3_combined_plot,
                   SD3_meth_plot, SD3_RNA_plot, SD3_combined_plot, ncol = 3, nrow = 2)
@@ -276,6 +285,7 @@ pdf(paste0(fig_dir, "Eular_meth_RNA_DEC3.pdf"), width = 15, height = 10)
 plot(plot)
 dev.off()
 
+# Extended data Fig 9e
 # GSK300 3 days
 plot <- ggarrange(LG3_meth_plot, LG3_RNA_plot, LG3_combined_plot,
                   SG3_meth_plot, SG3_RNA_plot, SG3_combined_plot, ncol = 3, nrow = 2)
@@ -284,13 +294,6 @@ pdf(paste0(fig_dir, "Eular_meth_RNA_GSK3.pdf"), width = 15, height = 10)
 plot(plot)
 dev.off()
 
-# GSK300 7 days
-plot <- ggarrange(LG7_meth_plot, LG7_RNA_plot, LG7_combined_plot,
-                  SG7_meth_plot, SG7_RNA_plot, SG7_combined_plot, ncol = 3, nrow = 2)
-
-pdf(paste0(fig_dir, "Eular_meth_RNA_GSK7.pdf"), width = 15, height = 10)
-plot(plot)
-dev.off()
 
 # SCRIPT ENDS HERE##############################################################
 
