@@ -25,8 +25,7 @@ lib_path <- .libPaths("C:/Rpackages/") # specifing the package library
 #BiocManager::install(lib.loc = lib_path, update = TRUE, ask = FALSE)
 
 
-pack_R <- c("TissueEnrich", "tidyr", "ggpubr", "stringr",
-            "openxlsx", "dplyr") # libraries to load
+pack_R <- c("TissueEnrich", "tidyr", "ggpubr", "stringr", "dplyr") # libraries to load
 
 for (i in 1:length(pack_R)) {
   library(pack_R[i], character.only = TRUE)
