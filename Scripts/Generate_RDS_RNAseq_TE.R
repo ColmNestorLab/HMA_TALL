@@ -18,8 +18,8 @@ set.seed(121) # seed for reproducibility
 
 #-------------------------------------------------------------------------------
 
-setwd("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE")
-rna_dir <- "P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/" # rna seq folder
+setwd("working directory")
+rna_dir <- "input directory for rna-seq" # rna seq folder
 
 lib_path <- .libPaths("C:/Rpackages/") # specifing the package library
 #update.packages(lib.loc = lib_path, ask = FALSE, checkBuilt = TRUE, dependencies = TRUE)
@@ -249,8 +249,3 @@ for(i in 1:length(results_S)) {
 
 rm(LINE, SINE, ERV) # remove data created in the for loop
 
-#-------------------------------------------------------------------------------
-
-              ### Read in rds files and add position-----
-
-#-------------------------------------------------------------------------------
