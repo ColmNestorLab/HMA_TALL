@@ -12,9 +12,6 @@
 # trimming, alignment (STAR), quantification with TElocal. The script contains
 # the downstream analysis based on the RNAseq123. 
 
-# TElocal was re-run on 2024-07-04 due to updated STAR alignment. This script has been
-# adapted for the new TElocal files derived from 2024-07-04 and 2024-07-05
-
 # Comment: https://www.bioconductor.org/packages/devel/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html#reading-in-count-data 
 # Comment: https://github.com/mhammell-laboratory/TEtranscripts 
 # Comment: https://bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
@@ -29,8 +26,8 @@ set.seed(1040) # seed for reproducibility
               ### 0. Set directory structure and load packages 
 
 #-------------------------------------------------------------------------------
-setwd("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/")
-main_dir <- "P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/"
+setwd("working directory")
+main_dir <- "input directory"
 
 lib_path <- .libPaths("C:/Rpackages/") # specifing the package library
 #update.packages(lib.loc = lib_path, ask = FALSE, checkBuilt = TRUE, dependencies = TRUE)
