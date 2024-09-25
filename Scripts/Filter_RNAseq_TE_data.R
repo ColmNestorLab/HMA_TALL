@@ -1,7 +1,5 @@
 # Filter RNA-sequencing TE data
 
-# Title: Filter RNA-sequencing TE data_240809
-
 # Author: Sandra Hellberg
 # Email: sandra.hellberg@liu.se
 
@@ -18,9 +16,9 @@ set.seed(524) # seed for reproducibility
               ### Set directory structure and load packages 
 
 #-------------------------------------------------------------------------------
-setwd("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/rds/")
-rna_dir <- "P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/rds/"
-fig_dir <- "P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/Figures/pdf/"
+setwd("working directory")
+rna_dir <- "data input directory"
+fig_dir <- "output directory for figures"
 
 lib_path <- .libPaths("C:/Rpackages/") # specifing the package library
 #update.packages(lib.loc = lib_path, ask = FALSE, checkBuilt = TRUE, dependencies = TRUE)
@@ -45,7 +43,7 @@ table(TE_locations$chr) # check so that no strange chromosomes remain
 
 
 # LOUCY
-loucy_input <- list.files("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/rds/", pattern = "_L")
+loucy_input <- list.files("location of RDS files generated using Generate_RDS_RNAseq_TE.R", pattern = "_L")
 
 loucy_names <- loucy_input %>% # create a vector with the file names to be used in the for loop
     str_remove(".rds")
@@ -53,7 +51,7 @@ loucy_names <- loucy_input %>% # create a vector with the file names to be used 
 print(loucy_names)
 
 for(i in 1:length(loucy_input)) {
-  df <- readRDS(paste0("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/rds/", loucy_input[i]))
+  df <- readRDS(paste0("location of RDS files generated using Generate_RDS_RNAseq_TE.R", loucy_input[i]))
   df$Name <- rownames(df)
   df <- merge(df, TE_locations, by.x = "transcript", by.y = "TE")
   x <- df[ -grep("chrY", df$chr),]
@@ -70,7 +68,7 @@ for(i in 1:length(loucy_input)) {
 
 
 # SUP-T1
-supt1_input <- list.files("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/rds/", pattern = "_S")
+supt1_input <- list.files("location of RDS files generated using Generate_RDS_RNAseq_TE.R", pattern = "_S")
 
 supt1_names <- supt1_input %>% # create a vector with the file names to be used in the for loop
   str_remove(".rds")
@@ -78,7 +76,7 @@ supt1_names <- supt1_input %>% # create a vector with the file names to be used 
 print(supt1_names)
 
 for(i in 1:length(supt1_input)) {
-  df <- readRDS(paste0("P:/LiU/1.Projekt/2.Nuvarande/3.CN/HMA/Analysis/RNAseq/TElocal/results/TE/rds/", supt1_input[i]))
+  df <- readRDS(paste0("location of RDS files generated using Generate_RDS_RNAseq_TE.R", supt1_input[i]))
   df$Name <- rownames(df)
   df <- merge(df, TE_locations, by.x = "transcript", by.y = "TE")
   x <- df[ -grep("chrY", df$chr),]
