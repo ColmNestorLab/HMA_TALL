@@ -19,7 +19,7 @@
 # Oncogenes
 
 
-### Immune genes, CTAs, TSGs and oncogenes summarized in Supplementary Table 12
+### Immune genes, CTAs, TSGs and oncogenes summarized in Supplementary Table 14
 # list of immune genes curated by Sandra H. (citations ????)
 # TSGs and oncogenes based on the Network of cancer genes & healthy drivers 
 # http://network-cancer-genes.org/citation.php
@@ -64,16 +64,16 @@ sessionInfo()
 ##### reading in data #####
 
 ### differentially expressed genes
-# Supplementary Table 10
-df_expression_combined <- read.delim("R_exports/tables/Supplementary_Table_10.csv", sep = ",")
+# Supplementary Table 12
+df_expression_combined <- read.delim("R_exports/tables/Supplementary_Table_12.csv", sep = ",")
 
 ### DNA methylation sensitive genes
-# Supplementary Table 11
-methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_11.csv", sep = ",")
+# Supplementary Table 13
+methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_13.csv", sep = ",")
 
 ### lists of genes
-# Supplementary Table 12
-genes_of_interest <- as.data.frame(read_excel("R_imports/Supplementary_Table_12.xlsx", 
+# Supplementary Table 14
+genes_of_interest <- as.data.frame(read_excel("R_imports/Supplementary_Table_14.xlsx", 
                                               skip = 1))
 
 

@@ -12,7 +12,7 @@
 
 ### methylation sensitive genes defined based on DEG and DMR analysis
 # see script: combining_DNAmethylation_and_expression_data.R
-# Supplementary Table 11
+# Supplementary Table 13
 
 
 ### Figure: Extended Data Fig. 5e
@@ -57,7 +57,7 @@ show_col (nejm_colors)
 
 ##### import and format data #####
 
-### Supplementary Table 11
+### Supplementary Table 13
 # data on methylation and expression was combined and exported in script 
 #   combining_DNAmethylation_and_expression_data.R
 
@@ -66,7 +66,7 @@ show_col (nejm_colors)
 # expressed and upregulated in treated cells (cpm >= 0.5, logFC > 1 and padjust < 0.05)
 # promoter gets de-methylated after treatment (meth.diff <= -25 and q < 0.01)
 
-methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_11.csv", sep = ",")
+methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_13.csv", sep = ",")
 
 
 ### extract gene lists

@@ -60,9 +60,9 @@ sessionInfo()
 # dataframe with information on DNA methylation and differential expression
 # data combined in script combining_DNAmethylation_and_expression_data.R
 # only curated transcripts included (NM/NR)
-# Supplementary Table 11
+# Supplementary Table 13
 
-methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_11.csv", sep = ",")
+methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_13.csv", sep = ",")
 
 
 ### make dataframe for plotting

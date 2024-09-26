@@ -18,7 +18,7 @@
 
 
 ### exported data used in Fig. 4 and Extended Data Fig. 5-8
-# Supplementary Tables 10 and 11
+# Supplementary Tables 12 and 13
 
 
 
@@ -241,11 +241,11 @@ df_methylation_expression_N_transcripts[
 # write as comma separated files
 
 ### expression only
-# will be supplementary table 10
-write.table(df_expression_combined, "R_exports/tables/Supplementary_Table_10.csv",
+# will be supplementary table 12
+write.table(df_expression_combined, "R_exports/tables/Supplementary_Table_12.csv",
             sep = ",", quote = FALSE, col.names = TRUE, row.names = FALSE)
 
 ### DNA methylation and expression
-# Supplementary Table 11
-write.table(df_methylation_expression_N_transcripts, "R_exports/tables/Supplementary_Table_11.csv",
+# Supplementary Table 13
+write.table(df_methylation_expression_N_transcripts, "R_exports/tables/Supplementary_Table_13.csv",
             sep = ",", quote = FALSE, col.names = TRUE, row.names = FALSE)

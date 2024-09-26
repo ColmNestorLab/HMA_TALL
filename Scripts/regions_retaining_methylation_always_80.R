@@ -39,6 +39,7 @@
 library(methylKit)
 library(genomation)
 library(rtracklayer)
+library(dplyr)
 
 
 
@@ -233,6 +234,7 @@ regions_80_LG7_ctrl_treated_GRanges_annot_gene <-
   annotateWithGeneParts(target = regions_80_LG7_ctrl_treated_GRanges, feature = gene_annot)
 regions_80_SG7_ctrl_treated_GRanges_annot_gene <- 
   annotateWithGeneParts(target = regions_80_SG7_ctrl_treated_GRanges, feature = gene_annot)
+
 
 
 ### Are regions found at transposable elements (TEs)?
@@ -439,7 +441,6 @@ remove(temp)
 remove(s)
 remove(r)
 
-remove(list = ls(pattern = "GRanges"))
 
 
 ##### export files #####
@@ -496,10 +497,11 @@ promoters_80ctrl_S_gene_ids <- unique(
                                  "gene_id"])
 promoters_80ctrl_both_gene_ids <- intersect(promoters_80ctrl_L_gene_ids, promoters_80ctrl_S_gene_ids)
 
-# how many gene do not lose DNA methylation at their promoters?
+# how many gene have >= 80% DNA methylation in control cells?
 length(promoters_80ctrl_L_gene_ids) # 18298
 length(promoters_80ctrl_S_gene_ids) # 19000
 length(promoters_80ctrl_both_gene_ids) # 14531
+
 
 
 ##### export list of genes #####
@@ -507,7 +509,7 @@ length(promoters_80ctrl_both_gene_ids) # 14531
 ### will together become supplementary table 9
 
 # whose promoters are >= 80% methylated in control cells
-# retain methylation 
+# retain DNA methylation 
 # LOUCY cells
 
 write.table(promoters_80ctrl_L_gene_ids, "R_exports/tables/promoters_80ctrl_L_gene_ids.txt",
@@ -516,10 +518,26 @@ write.table(promoters_retain_L_gene_ids, "R_exports/tables/promoters_retain_L_ge
             sep = "\t", quote = FALSE, col.names = FALSE, row.names = FALSE)
 
 # whose promoters are >= 80% methylated in control cells
-# retain methylation 
-# LOUCY cells
+# retain DNA methylation 
+# SUP-T1 cells
 
 write.table(promoters_80ctrl_S_gene_ids, "R_exports/tables/promoters_80ctrl_S_gene_ids.txt",
             sep = "\t", quote = FALSE, col.names = FALSE, row.names = FALSE)
 write.table(promoters_retain_S_gene_ids, "R_exports/tables/promoters_retain_S_gene_ids.txt",
             sep = "\t", quote = FALSE, col.names = FALSE, row.names = FALSE)
+
+
+
+##### Have a quick look at the location of regions across the genome #####
+
+library(karyoploteR)
+
+# plot regions keeping DNA methylation for SUP-T1 and LOUCY cells
+kp <- plotKaryotype()
+kpPlotRegions(kp, data = regions_80_LG7_ctrl_treated_GRanges, col = nejm_colors[3], r0 = 0.1, r1 = 0.45)
+kpPlotRegions(kp, data = regions_80_SG7_ctrl_treated_GRanges, col = nejm_colors[5], r0 = 0.6, r1 = 0.95)
+
+# export plot manually as pdf
+
+
+remove(list = ls(pattern = "GRanges"))

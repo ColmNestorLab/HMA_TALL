@@ -12,7 +12,7 @@
 
 ### DNA methylation and expression data combined in one file
 # script: combining_DNAmethylation_and_expression_data.R
-# Supplementary Table 11
+# Supplementary Table 13
 
 
 ### Figure: Extended Data Fig. 5d
@@ -55,7 +55,7 @@ show_col (npg_colors)
 
 ##### import and format data #####
 
-### Supplementary Table 11
+### Supplementary Table 13
 # data on methylation and expression was combined and exported in script 
 #   combining_DNAmethylation_and_expression_data.R
 
@@ -69,7 +69,7 @@ show_col (npg_colors)
 # loss: methylation difference < -25 and adjusted p < 0.01
 # no change: all others
 
-methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_11.csv", sep = ",")
+methylation_expression_N_transcripts <- read.delim("R_exports/tables/Supplementary_Table_13.csv", sep = ",")
 
 
 ### extract gene lists

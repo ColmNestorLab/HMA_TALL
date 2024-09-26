@@ -8,7 +8,7 @@
 
 ### plot a bar plot showing the number of differentially expressed genes
 # based on DEG analysis by Sandra H
-# summarized in supplementary Table 10
+# summarized in supplementary Table 12
 
 
 ### definition of differential expression
@@ -57,14 +57,14 @@ show_col (npg_colors)
 
 # DEG analysis done by Sandra H.
 # individual files were combined and exported in script combining_DNAmethylation_and_expression_data.R
-# Supplementary Table 10
+# Supplementary Table 12
 
 ### expression change was summarized in column "expression"
 # upregulated: logFC > 1 and adjusted p < 0.05
 # downregulated: logFC < -1 and adjusted p < 0.05
 # no change: all others
 
-df_expression_combined <- read.delim("R_exports/tables/Supplementary_Table_10.csv", sep = ",")
+df_expression_combined <- read.delim("R_exports/tables/Supplementary_Table_12.csv", sep = ",")
 
 
 
