@@ -1,6 +1,6 @@
 # Non-toxic inhibition of DNMT1 reveals the DNA methylation-responsive compartment of the leukemic transcriptome
 
-Maike Bensberg<sup>1†</sup>, Aida Selimović-Pašić1<sup>1†</sup>, Lisa Haglund<sup>1</sup>, Júlia Goldmann<sup>1</sup>, Sandra Hellberg<sup>2†</sup>, Colm E. Nestor<sup>1†</sup>
+Maike Bensberg<sup>1†</sup>, Aida Selimović-Pašić<sup>1†</sup>, Lisa Haglund<sup>1</sup>, Júlia Goldmann<sup>1</sup>, Sandra Hellberg<sup>2†</sup>, Colm E. Nestor<sup>1†</sup>
 
 
 <sup>1</sup> Crown Princess Victoria Children´s Hospital, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden.<br />
