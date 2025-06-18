@@ -1,10 +1,9 @@
 # Exposing the DNA methylation-responsive compartment of the leukaemic genome in T-ALL cell lines support its potential as a novel therapeutic target in T-ALL
 
-Maike Bensberg<sup>1†</sup>, Aida Selimović-Pašić<sup>1†</sup>, Lisa Haglund<sup>1</sup>, Júlia Goldmann<sup>1</sup>, Sandra Hellberg<sup>2†</sup>, Colm E. Nestor<sup>1†</sup>
+Maike Bensberg<sup>1†</sup>, Aida Selimović-Pašić<sup>1†</sup>, Lisa Haglund<sup>1</sup>, Júlia Goldmann<sup>1</sup>, Sandra Hellberg<sup>1†</sup>, Colm E. Nestor<sup>1†</sup>
 
 
 <sup>1</sup> Crown Princess Victoria Children´s Hospital, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden.<br />
-<sup>2</sup> Division of Inflammation and Infection, Department of Biomedical and Clinical Sciences, Linköping University, Linköping, Sweden.<br />
 
 <sup>†</sup> These authors have contributed equally to this work and share first and last authorship respectively. 
 
